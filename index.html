@@ -9,10 +9,67 @@
     <body>
 
 <style>
+    .container{
+        height: 200px;
+        position: absolute;
+        border: 0px
+    }
     .center{
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    a{
+        color: gray;
+        text-decoration: none;
+        padding:5px 5px 5px 5px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .centersearch{
+        margin: 0;
+        position: absolute;
+        height:30px;
+        border-radius: 20px;
+        top: 75%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 1px solid gray;
+    }
+  
+    input[type=text]{
+        padding:5px 5px 5px 5px;
+        background-color:white;
+        background-image: url('https://icon-library.com/images/google-magnifying-glass-icon/google-magnifying-glass-icon-10.jpg');
+        font-size: 16px;
+        background-position: 10px 10px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+    }
+
+   
+        input[type=text]:focus{
+            outline: none;
+        background-color:white;
+        box-shadow: 5px 5px rgb(67, 67, 70);
+    }
+    input[type=text]:hover{
+        border: 1px solid gray;
+        box-shadow: 5px 5px rgb(67, 67, 70);
+    }
+    .centerbutton{
+    margin: 0;
+        position: relative;
+        top: 100%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
     li{
         display: inline;
@@ -20,48 +77,106 @@
     ul{
         list-style-type: none;
         margin: auto;
-        padding:auto;
+        padding:20px;
+        left: 0;
     }
-
+    button{
+        height: 40px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+    }
+    button:hover{
+        background-color:none;
+        border: 1px solid black;
+        border-radius: 2px solid black;
+    }
     .down{
         bottom: 0;
         width: 100%;
         position: fixed;
+        background-color:rgb(231, 225, 225);
+        display: flex;
+    justify-content: space-between;
     }
-    .pic{
-        margin-top: 20%;
-    .test{
-        margin-left:10%;
-    }
+
+.alignleft {
+ 
+    display: flex;
+    width:100%;
+text-align:center;
+order: 0;
+}
+.aligncenter {
+
+    display: flex;
+  width:24%;
+  text-align:center;
+  order: 2;
+}
+.alignright {
+    display: flex;
+width:90%;
+text-align:center;
+order 2;
+}
     
-    
-    
-    
+.second{
+    display: flex;
+    justify-content:right;
+}
+.first{
+    display: flex;
+    justify-content: left;
+}  
+
+.toplinks{
+display: flex;
+justify-content: space-between;
+flex-direction:row;
+}
 </style>
-<ul>
+
+<ul class="toplinks">
+    <div class="first">
+        
     <li><a href="#about">About</a>
     </li>
     <li><a href="#store">Store</a></li>
-    <li><a href="#geemail">Gmail</a></li>
-    <li style="float:right"><a href="#images">Images</a></li>
+</div>
+<div class="second">
+    <div><li><a href="#geemail">Gmail</a></li></div>
+    <div><li><a href="#images">Images</a></li></div>
+    <div><li><a href="#googleapps"><img src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-apps_90405.png" style="width: 20px; height: 20px"></a></li></div>
+</div>
+
 </ul>
-<img class="center pic" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+<div class="container center">
+<img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+    <p>
+
     <form>
-        <input type="text" placeholder="hello" class="center">
+        <input type="text" class="centersearch" placeholder="hello" size=60>
     </form>
-    <div class="test">
-<button>Google Search</button> <button>I'm feeling lucky</button>
+    <p><div class="centerbutton">
+<a href="#google"><button>Google Search</button></a><a href="#lucky"><button>I'm feeling lucky</button></a></div>
 </div>
 
     <ul class="down">
+        <div class="alignleft">
         <li><a href="#advertising">Advertising</a>
         </li>
         <li><a href="#business">business</a></li>
-        <li><a href="#search">How search works</a></li>
-        <li style="float:right"><a href="#privacy">Privacy</a></li>
-        <li style="float:right"><a href="#terms">Terms</a></li>
-        <li style="float:right"><a href="#settings">Settings</a></li>
-        <li style="float:center"><a href="#carbon">Carbon neutral since 2017</a></li>
+    
+        <li><a href="#search">How search works</a></li></div>
+        <div class="aligncenter">
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#settings">Settings</a></li></div>
+        <div class="alignright">
+        <li><a href="#carbon">Carbon neutral since 2017</a></li>
+    </div>
     </ul>
 
 </body>
